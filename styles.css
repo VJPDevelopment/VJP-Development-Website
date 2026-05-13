@@ -702,6 +702,18 @@ svg {
   color: var(--ink-muted);
   max-width: 38ch;
 }
+.legal-note {
+  margin-top: var(--s-4);
+  padding-left: var(--s-3);
+  border-left: 2px solid var(--ink-hair);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--ink-muted);
+}
+.legal-note em {
+  font-style: normal;
+  color: var(--ink);
+}
 .legal-section {
   margin-bottom: var(--s-7);
 }
