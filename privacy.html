@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Thread privacy policy. Thread is an on-device, voice-first notes app. No accounts, no backend, no analytics."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Thread Privacy Policy &mdash; VJP Development</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page-in privacy-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-nav">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html" aria-label="VJP Development home">
+          VJP Development
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="thread.html">Thread</a>
+          <a href="#top" aria-current="page">Privacy</a>
+          <a href="support.html">Support</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <a id="top" tabindex="-1"></a>
+
+      <article class="legal">
+        <header class="legal-head">
+          <p class="legal-eyebrow">Effective May 11, 2026</p>
+          <h1 class="legal-title">Thread Privacy Policy</h1>
+          <p class="legal-lede">
+            Thread is a voice-first note-taking app made by Jackson Shell,
+            operating as VJP Development, a sole proprietorship. This
+            policy describes exactly what Thread does and doesn&rsquo;t do
+            with your information. It is short on purpose, because Thread
+            is built to keep your ideas on your iPhone.
+          </p>
+        </header>
+
+        <section class="legal-section">
+          <h2>The short version</h2>
+          <p>
+            Thread has no accounts, no backend, no analytics, and no
+            third-party services. Your voice, the transcripts it produces,
+            and the notes Thread organizes from those transcripts never
+            leave your iPhone. Everything happens on-device, using
+            frameworks that Apple ships as part of iOS.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>What Thread does</h2>
+          <p>When you tap the microphone in Thread:</p>
+          <ul class="legal-list">
+            <li>
+              <strong>Recording.</strong> Thread captures audio from your
+              iPhone&rsquo;s microphone using Apple&rsquo;s
+              <code>AVFoundation</code> framework. The audio stays in
+              memory only and is never written to a file.
+            </li>
+            <li>
+              <strong>Transcription.</strong> Thread converts that audio
+              into text using Apple&rsquo;s
+              <code>SFSpeechRecognizer</code>, configured with
+              <code>requiresOnDeviceRecognition = true</code> so
+              Apple&rsquo;s framework is forced to transcribe locally
+              rather than route audio to Apple&rsquo;s servers. If your
+              iPhone cannot transcribe on-device for any reason, Thread
+              refuses to record rather than fall back to cloud
+              transcription.
+            </li>
+            <li>
+              <strong>Organizing.</strong> Thread uses Apple&rsquo;s
+              on-device <code>FoundationModels</code> framework &mdash;
+              Apple Intelligence&rsquo;s local language model &mdash; to
+              turn the transcript into a structured note with a title, a
+              summary, and labeled sections. This processing happens
+              entirely on your iPhone.
+            </li>
+            <li>
+              <strong>Saving.</strong> Thread saves the organized note
+              &mdash; title and content text &mdash; to
+              <code>Core Data</code>, in the app&rsquo;s private sandbox
+              on your device. The raw transcript is discarded; only the
+              AI-organized text is kept.
+            </li>
+          </ul>
+        </section>
+
+        <section class="legal-section">
+          <h2>What Thread does not do</h2>
+          <p>Thread does not:</p>
+          <ul class="legal-list">
+            <li>
+              Send your voice, transcripts, or notes anywhere off your
+              iPhone.
+            </li>
+            <li>
+              Use any third-party AI provider. Thread does not call
+              OpenAI, Anthropic, Google, Microsoft, or any other AI
+              service. Speech recognition and note structuring are handled
+              exclusively by Apple&rsquo;s on-device iOS frameworks.
+            </li>
+            <li>
+              Require an account, a sign-in, or any personal information.
+            </li>
+            <li>
+              Include analytics, crash-reporting, advertising, or
+              marketing SDKs of any kind. No Firebase, no Crashlytics, no
+              Mixpanel, nothing of the sort.
+            </li>
+            <li>
+              Run a backend or contact a server. Thread makes no network
+              requests of its own.
+            </li>
+            <li>Sync to iCloud or any cloud service.</li>
+            <li>Track you across apps or share data with anyone.</li>
+            <li>
+              Use cookies, advertising identifiers, or persistent device
+              identifiers.
+            </li>
+            <li>
+              Run in the background or process your data when the app
+              isn&rsquo;t open.
+            </li>
+          </ul>
+          <p>
+            The single outbound action Thread can take is opening this
+            privacy policy or your iPhone&rsquo;s Settings app when you
+            tap the corresponding button. In both cases Thread hands the
+            URL to iOS, which opens it in Safari or the system Settings
+            &mdash; Thread itself makes no network call.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>Permissions Thread asks for</h2>
+          <p>
+            Thread requests two iOS permissions, both only at the moment
+            you first try to record:
+          </p>
+          <ul class="legal-list">
+            <li>
+              <strong>Microphone access</strong>, so the app can hear you.
+            </li>
+            <li>
+              <strong>Speech recognition</strong>, so Apple&rsquo;s
+              on-device speech framework can run on the audio.
+            </li>
+          </ul>
+          <p>
+            You can revoke either permission at any time in your
+            iPhone&rsquo;s Settings app. If you do, Thread keeps working;
+            you simply won&rsquo;t be able to record new notes until you
+            re-enable them.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>What&rsquo;s stored on your iPhone</h2>
+          <p>
+            Thread keeps three things in your iPhone&rsquo;s private app
+            sandbox:
+          </p>
+          <ul class="legal-list">
+            <li>
+              Your notes &mdash; title, organized content, and timestamps
+              &mdash; in a local <code>Core Data</code> store.
+            </li>
+            <li>
+              Three small numbers in iOS&rsquo;s
+              <code>UserDefaults</code>: whether you&rsquo;ve finished
+              onboarding, the total number of notes you have ever created,
+              and the total number of seconds you have ever spent
+              recording. None of these include any text from your notes.
+            </li>
+            <li>
+              Standard iOS app data such as your in-app preferences.
+            </li>
+          </ul>
+          <p>
+            When you delete a note in Thread, it is removed from the local
+            store. When you delete the Thread app, iOS removes the entire
+            sandbox &mdash; your notes, the counters, all of it. There is
+            nothing left on a server because no server exists.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>Children&rsquo;s privacy</h2>
+          <p>
+            Thread is rated 4+ in the App Store. It does not knowingly
+            collect personal information from anyone, regardless of age,
+            because it does not knowingly collect personal information at
+            all. The notes you record are stored locally on your iPhone
+            and are not transmitted to us or anyone else.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>Changes to this policy</h2>
+          <p>
+            This policy will change only when Thread changes. If a future
+            version of Thread adds any feature that transmits your data
+            off your iPhone &mdash; for any reason, including cloud sync,
+            account creation, third-party AI, analytics, or anything else
+            &mdash; we will:
+          </p>
+          <ol class="legal-list legal-list-numbered">
+            <li>Update this policy before the feature ships.</li>
+            <li>
+              Show you an in-app explanation of what is changing and why.
+            </li>
+            <li>
+              Require your explicit consent before any data leaves your
+              device.
+            </li>
+          </ol>
+          <p>
+            The current version of Thread does none of this, and any
+            change to that promise will be a deliberate one you actively
+            agree to.
+          </p>
+        </section>
+
+        <section class="legal-section">
+          <h2>Contact</h2>
+          <p>
+            Thread is built by Jackson Shell, operating as VJP Development
+            (a sole proprietorship). If you have questions about this
+            policy, email
+            <a
+              class="legal-link"
+              href="mailto:vjpdevelopment@gmail.com"
+              >vjpdevelopment@gmail.com</a
+            >.
+          </p>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-cols">
+          <div class="footer-col">
+            <p class="footer-heading">Socials</p>
+            <ul class="footer-list">
+              <li><a href="#">X (Twitter)</a></li>
+              <li><a href="#">Instagram</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <p class="footer-heading">Apps</p>
+            <ul class="footer-list">
+              <li><a href="thread.html">Thread</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <p class="footer-heading">Studio</p>
+            <ul class="footer-list">
+              <li><a href="index.html#about">About</a></li>
+              <li>
+                <a href="mailto:vjpdevelopment@gmail.com">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="footer-meta">&copy; 2026 VJP Development</p>
+      </div>
+    </footer>
+  </body>
+</html>
